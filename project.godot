@@ -13,7 +13,7 @@ config_version=5
 config/name="TheMissing"
 run/main_scene="uid://bcpya6s5vqtr7"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://bc1gihw4byp6t"
 
 [autoload]
 
@@ -23,6 +23,7 @@ AudioManager="*uid://10538fi40wwl"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+window/stretch/mode="canvas_items"
 
 [physics]
 
@@ -33,3 +34,4 @@ window/size/viewport_height=720
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
