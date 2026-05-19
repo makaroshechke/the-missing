@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://cvpdqs8qwhrcy"]
+
+[ext_resource type="Script" uid="uid://bfq2lyvwysi3q" path="res://scripts/puzzle_level.gd" id="1_lao6i"]
+[ext_resource type="Texture2D" uid="uid://cd5m6tydw7r72" path="res://assets/photos/photo2.png" id="2_jipe1"]
+[ext_resource type="Texture2D" uid="uid://denjcqnaxr5r5" path="res://assets/backgrounds/пазл 2.png" id="3_lao6i"]
+[ext_resource type="Texture2D" uid="uid://be2jjih6uiyy1" path="res://assets/photos/paper2.png" id="4_tdn7k"]
+[ext_resource type="Texture2D" uid="uid://bil21mv7bh273" path="res://assets/button (2).png" id="5_jipe1"]
+[ext_resource type="Shader" uid="uid://jvt6gr7dnc3t" path="res://Shader.gdshader" id="5_w0363"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b0bbq"]
+shader = ExtResource("5_w0363")
+shader_parameter/light_center = Vector2(0.5, 0.45)
+shader_parameter/radius = 0.805
+shader_parameter/softness = 0.45
+shader_parameter/darkness = 0.65
+shader_parameter/warm_color = Color(0.9999997, 0.8363142, 0.603581, 0.18039216)
+
+[node name="PuzzleLevel" type="Control" unique_id=1884990359]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_lao6i")
+puzzle_texture = ExtResource("2_jipe1")
+columns = 3
+next_scene = "res://scenes/PuzzleLevel3.tscn"
+
+[node name="Background" type="Sprite2D" parent="." unique_id=763775320]
+texture = ExtResource("3_lao6i")
+centered = false
+
+[node name="PhotoPreview" type="Sprite2D" parent="." unique_id=1401605245]
+position = Vector2(386, 183)
+texture = ExtResource("4_tdn7k")
+centered = false
+
+[node name="PuzzleArea" type="Control" parent="." unique_id=373232888]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -268.0
+offset_top = -181.0
+offset_right = 268.0
+offset_bottom = 181.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Pieces" type="Node2D" parent="." unique_id=1021235627]
+
+[node name="LampVignette" type="ColorRect" parent="." unique_id=2101851836]
+material = SubResource("ShaderMaterial_b0bbq")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="NextButton" type="Button" parent="." unique_id=746523217]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 489.0
+offset_top = 217.0
+offset_right = 605.0
+offset_bottom = 333.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("5_jipe1")
+flat = true
+
+[node name="FadeLayer" type="ColorRect" parent="." unique_id=957933821]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)

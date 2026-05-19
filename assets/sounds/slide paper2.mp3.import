@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bnt4486a2n6a5"
+path="res://.godot/imported/slide paper2.mp3-9c2fdb8e6ba4ec7eb610d2911c6983f7.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/slide paper2.mp3"
+dest_files=["res://.godot/imported/slide paper2.mp3-9c2fdb8e6ba4ec7eb610d2911c6983f7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
