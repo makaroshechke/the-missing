@@ -26,8 +26,6 @@ func init_piece(texture: Texture2D, start_pos: Vector2, target_pos: Vector2, pie
 	rect_shape.size = piece_size
 	collision_shape.shape = rect_shape
 	
-	# CollisionShape2D у Area2D считается от центра,
-	# поэтому сдвигаем его в центр прямоугольного кусочка.
 	collision_shape.position = piece_size / 2.0
 
 
