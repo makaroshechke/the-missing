@@ -9,11 +9,8 @@ uniform vec4 warm_color : source_color = vec4(1.0, 0.78, 0.45, 0.18);
 void fragment() {
 	vec2 uv = UV;
 	float dist = distance(uv, light_center);
-
 	float vignette = smoothstep(radius, radius - softness, dist);
-
 	vec4 dark = vec4(0.0, 0.0, 0.0, darkness);
 	vec4 warm = warm_color * vignette;
-
 	COLOR = mix(dark, warm, vignette);
 }

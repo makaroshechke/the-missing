@@ -26,19 +26,15 @@ func _ready() -> void:
 	sfx_player = AudioStreamPlayer.new()
 	slide_player = AudioStreamPlayer.new()
 	sob_player = AudioStreamPlayer.new()
-
 	add_child(music_player)
 	add_child(sfx_player)
 	add_child(slide_player)
 	add_child(sob_player)
-
 	music_player.volume_db = -12
 	sfx_player.volume_db = -3
 	slide_player.volume_db = -18
 	sob_player.volume_db = -5
-
 	music_player.finished.connect(_on_music_finished)
-
 	music_player.stream = daydreaming
 	music_player.play()
 

@@ -5,7 +5,6 @@ extends Control
 @onready var start_button: Button = $StartButton
 @onready var fade_layer: ColorRect = $FadeLayer
 
-
 func _ready() -> void:
 	fade_layer.visible = true
 	fade_layer.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -14,7 +13,6 @@ func _ready() -> void:
 	start_button.pressed.connect(_on_start_pressed)
 	var tween := create_tween()
 	tween.tween_property(fade_layer, "modulate:a", 0.0, 1.0)
-
 
 func _on_start_pressed() -> void:
 	AudioManager.play_button()

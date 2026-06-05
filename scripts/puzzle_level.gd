@@ -62,14 +62,12 @@ func _create_puzzle() -> void:
 			)
 			var piece := piece_scene.instantiate()
 			pieces_parent.add_child(piece)
-
 			piece.init_piece(
 				atlas,
 				random_pos,
 				correct_pos,
 				piece_screen_size
 			)
-
 			piece.rotation_degrees = 0
 			piece.piece_locked.connect(_on_piece_locked)
 
