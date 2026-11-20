@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c3i1n5uccoms3" path="res://scripts/ending_scene.gd" id="1_as4tj"]
 [ext_resource type="FontFile" uid="uid://b8krovulyf1sc" path="res://assets/alcotton.ttf" id="3_4qy0h"]
+[ext_resource type="Script" uid="uid://5omuae6r0swk" path="res://localization/localized_text.gd" id="3_oygov"]
 
 [sub_resource type="FontVariation" id="FontVariation_ldsnl"]
 base_font = ExtResource("3_4qy0h")
@@ -49,6 +50,8 @@ text = "По итогам 2025 года в России десятки тыся�
 в статистике ненайденных."
 label_settings = SubResource("LabelSettings_ldsnl")
 horizontal_alignment = 1
+script = ExtResource("3_oygov")
+translation_key = "ending_text_1"
 
 [node name="Text2" type="Label" parent="." unique_id=1499145454]
 modulate = Color(1, 1, 1, 0)
@@ -68,3 +71,5 @@ text = "Единственное , что остается их близким �
 и наши воспоминания о них."
 label_settings = SubResource("LabelSettings_ldsnl")
 horizontal_alignment = 1
+script = ExtResource("3_oygov")
+translation_key = "ending_text_2"

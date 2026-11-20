@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://own257yyw5x0" path="res://scripts/main_menu.gd" id="1_ow34m"]
 [ext_resource type="Texture2D" uid="uid://d0woswesn6plk" path="res://assets/backgrounds/пазал 0.png" id="2_l72w3"]
 [ext_resource type="Texture2D" uid="uid://dh3exwrrok2ex" path="res://assets/button.png" id="3_826wr"]
+[ext_resource type="Script" uid="uid://5omuae6r0swk" path="res://localization/localized_text.gd" id="3_l72w3"]
 [ext_resource type="FontFile" uid="uid://b8krovulyf1sc" path="res://assets/alcotton.ttf" id="4_ucygd"]
 
 [sub_resource type="FontVariation" id="FontVariation_glbon"]
@@ -13,6 +14,24 @@ spacing_glyph = -54
 font = SubResource("FontVariation_glbon")
 font_size = 74
 outline_size = 5
+
+[sub_resource type="FontVariation" id="FontVariation_l72w3"]
+base_font = ExtResource("4_ucygd")
+spacing_glyph = -17
+
+[sub_resource type="LabelSettings" id="LabelSettings_826wr"]
+font = SubResource("FontVariation_l72w3")
+font_size = 52
+outline_size = 2
+
+[sub_resource type="FontVariation" id="FontVariation_ucygd"]
+base_font = ExtResource("4_ucygd")
+spacing_glyph = -5
+
+[sub_resource type="LabelSettings" id="LabelSettings_mipys"]
+font = SubResource("FontVariation_ucygd")
+font_size = 25
+outline_size = 2
 
 [node name="MainMenu" type="Control" unique_id=175852005]
 layout_mode = 3
@@ -43,6 +62,8 @@ grow_vertical = 2
 text = "Пропавшая без вести"
 label_settings = SubResource("LabelSettings_jix8l")
 horizontal_alignment = 1
+script = ExtResource("3_l72w3")
+translation_key = "game_title"
 
 [node name="StartButton" type="Button" parent="." unique_id=853063222]
 layout_mode = 1
@@ -51,14 +72,76 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -231.5
-offset_top = 2.5
-offset_right = 231.5
-offset_bottom = 109.5
+offset_left = -231.0
+offset_top = -49.0
+offset_right = 232.0
+offset_bottom = 58.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_ucygd")
+theme_override_font_sizes/font_size = 48
 icon = ExtResource("3_826wr")
 flat = true
+icon_alignment = 1
+
+[node name="Start" type="Label" parent="StartButton" unique_id=473161619]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -448.5
+offset_top = -51.5
+offset_right = 446.5
+offset_bottom = 52.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Начать"
+label_settings = SubResource("LabelSettings_826wr")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_l72w3")
+translation_key = "btn_start"
+
+[node name="LanguageButton" type="Button" parent="." unique_id=2083146923]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -229.0
+offset_top = 70.0
+offset_right = 234.0
+offset_bottom = 177.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_ucygd")
+theme_override_font_sizes/font_size = 48
+icon = ExtResource("3_826wr")
+flat = true
+icon_alignment = 1
+
+[node name="language" type="Label" parent="LanguageButton" unique_id=13985687]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -448.5
+offset_top = -51.5
+offset_right = 446.5
+offset_bottom = 52.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Язык: русский"
+label_settings = SubResource("LabelSettings_mipys")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_l72w3")
+translation_key = "lang_button"
 
 [node name="FadeLayer" type="ColorRect" parent="." unique_id=1603021455]
 layout_mode = 1

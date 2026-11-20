@@ -18,6 +18,7 @@ config/icon="uid://bc1gihw4byp6t"
 [autoload]
 
 AudioManager="*uid://10538fi40wwl"
+LocalizationManager="*uid://ct3l7yyoe74ii"
 
 [display]
 

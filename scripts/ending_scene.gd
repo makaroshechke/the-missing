@@ -5,8 +5,9 @@ extends Control
 @onready var text1: Label = $Text1
 @onready var text2: Label = $Text2
 
-
 func _ready() -> void:
+	text1.text = LocalizationManager.tr_key("ending_text_1")
+	text2.text = LocalizationManager.tr_key("ending_text_2")
 	text1.modulate.a = 0.0
 	text2.modulate.a = 0.0
 	await get_tree().create_timer(1.0).timeout
