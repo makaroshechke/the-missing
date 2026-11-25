@@ -27,6 +27,8 @@ script = ExtResource("1_lao6i")
 puzzle_texture = ExtResource("2_jipe1")
 columns = 3
 next_scene = "res://scenes/PuzzleLevel3.tscn"
+poster_ru = ExtResource("2_jipe1")
+poster_en = ExtResource("2_jipe1")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=763775320]
 texture = ExtResource("3_lao6i")

@@ -1,4 +1,3 @@
-
 extends Control
 
 @export var puzzle_texture: Texture2D
@@ -6,6 +5,8 @@ extends Control
 @export var rows: int = 2
 @export var next_scene: String = "res://scenes/PuzzleLevel2.tscn"
 @export var enable_sob: bool = false
+@export var poster_ru: Texture2D
+@export var poster_en: Texture2D
 
 @onready var next_button: Button = $NextButton
 @onready var puzzle_area: Control = $PuzzleArea
@@ -29,11 +30,20 @@ func _ready() -> void:
 	next_button.visible = false
 	next_button.disabled = true
 	next_button.pressed.connect(_on_next_button_pressed)
+	_update_puzzle_language()
 	_create_puzzle()
 	_fade_in()
 	if enable_sob:
 		_start_sob_loop()
 
+func _update_puzzle_language() -> void:
+	if poster_ru == null or poster_en == null:
+		push_error("Poster textures are not assigned!")
+		return
+	if LocalizationManager.current_lang == "en":
+		puzzle_texture = poster_en
+	else:
+		puzzle_texture = poster_ru
 
 func _create_puzzle() -> void:
 	if puzzle_texture == null:
@@ -108,6 +118,7 @@ func _on_puzzle_completed() -> void:
 		1.0
 	)
 
+
 func _fade_in() -> void:
 	var tween := create_tween()
 	tween.tween_property(
@@ -133,6 +144,7 @@ func _start_sob_loop() -> void:
 		await scene_tree.create_timer(
 			randf_range(5.0, 6.0)
 		).timeout
+
 
 func _exit_tree() -> void:
 	sob_loop_active = false

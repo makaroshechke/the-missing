@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bfq2lyvwysi3q" path="res://scripts/puzzle_level.gd" id="1_yoqch"]
 [ext_resource type="Texture2D" uid="uid://br8p78p6kn65q" path="res://assets/photos/photo4.png" id="2_yoqch"]
+[ext_resource type="Texture2D" uid="uid://cghlchfkhl3x" path="res://assets/photos/photo4_en.png" id="3_k0vud"]
 [ext_resource type="Texture2D" uid="uid://cfs3wde0n88xu" path="res://assets/backgrounds/пазал 4.png" id="3_t88cb"]
 [ext_resource type="Texture2D" uid="uid://dtfeq7jf00v4y" path="res://assets/photos/paper4.png" id="4_yoqch"]
 [ext_resource type="Texture2D" uid="uid://bil21mv7bh273" path="res://assets/button (2).png" id="5_bi7kd"]
@@ -29,6 +30,8 @@ columns = 4
 rows = 3
 next_scene = "res://scenes/EndingScene.tscn"
 enable_sob = true
+poster_ru = ExtResource("2_yoqch")
+poster_en = ExtResource("3_k0vud")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=763775320]
 texture = ExtResource("3_t88cb")

@@ -25,6 +25,8 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_g2sn4")
 puzzle_texture = ExtResource("2_g2sn4")
+poster_ru = ExtResource("2_g2sn4")
+poster_en = ExtResource("2_g2sn4")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=763775320]
 texture = ExtResource("1_ti0h8")
